@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.SignupFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/killua_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:adjustViewBounds="true"
+                android:maxWidth="260dp"
+                android:maxHeight="260dp"
+                android:minWidth="120dp"
+                android:minHeight="120dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/killua"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/name_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/killua_iv"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusTopStart="16dp"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="48dp"
+                app:boxStrokeColor="#000"
+                android:textColorHint="#000" >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="name"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                   />
+                <TextView
+                    android:id="@+id/name_error_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#E31414"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@+id/name_layout"
+                app:layout_constraintRight_toRightOf="@+id/name_layout"
+                app:layout_constraintTop_toBottomOf="@+id/name_layout"
+                android:layout_marginTop="8dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:boxStrokeColor="#000"
+                android:textColorHint="#000">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="e-mail"
+                    android:textColor="#000"
+                    android:textSize="16dp"
+                    android:inputType="textEmailAddress"/>
+                <TextView
+                    android:id="@+id/email_error_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:textSize="16dp"
+                    android:textColor="#E31414"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pass_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColorHint="#000"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxStrokeColor="#000"
+                app:layout_constraintLeft_toLeftOf="@+id/email_layout"
+                app:layout_constraintRight_toRightOf="@+id/email_layout"
+                app:layout_constraintTop_toBottomOf="@id/email_layout"
+                app:passwordToggleEnabled="true">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/pass_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="password"
+                    android:textColor="#000"
+                    android:textSize="16dp"
+                    android:inputType="textPassword"/>
+                <TextView
+                    android:id="@+id/pass_error_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="16dp"
+                    android:textColor="#E31414"
+                    android:layout_marginTop="4dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/signup_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/pass_layout"
+                app:layout_constraintLeft_toLeftOf="@id/pass_layout"
+                app:layout_constraintRight_toRightOf="@+id/pass_layout"
+                android:text="signup"
+                android:textAllCaps="false"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="48dp"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                app:cornerRadius="16dp"
+                android:padding="8dp"
+                android:backgroundTint="@color/colorPrimary"
+                />
+<TextView
+    android:id="@+id/go_login_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@+id/signup_btn"
+    app:layout_constraintLeft_toLeftOf="@+id/signup_btn"
+    app:layout_constraintRight_toRightOf="@id/signup_btn"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:text="Have an account ? \n Go login"
+    android:textColor="#000"
+    android:textSize="16sp"
+    android:textAlignment="center"
+    android:clickable="true"
+    android:focusable="true"
+    android:lineSpacingExtra="2dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="64dp"
+    android:gravity="center" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
